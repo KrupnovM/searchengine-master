@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: Anakonda123!
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+    #  show-sql: true
+    open-in-view: true
+  # логи
+  logging:
+      level:
+        org.hibernate.SQL: info
+
+
+indexing-settings:
+  sites:
+        - url:  https://dombulgakova.ru
+          name: Dombulgakova.ru
+        - url: https://www.playback.ru
+          name: PlayBack.Ru
+
